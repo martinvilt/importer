@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Reel Recipe Extractor",
+  "version": "1.2.0",
+  "description": "Pull the recipe out of an Instagram or Facebook reel caption - from the current tab or a pasted link - and send it to Kaalusemud.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://www.instagram.com/*",
+    "https://instagram.com/*",
+    "https://www.facebook.com/*",
+    "https://m.facebook.com/*",
+    "https://web.facebook.com/*",
+    "https://fb.watch/*",
+    "https://*.cdninstagram.com/*",
+    "https://*.fbcdn.net/*",
+    "https://kaalusemud.vercel.app/*",
+    "http://localhost:3000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://kaalusemud.vercel.app/recipes/import*", "http://localhost:3000/recipes/import*"],
+      "js": ["content-app.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Extract recipe", "default_popup": "popup.html" }
+}

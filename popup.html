@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reel Recipe Extractor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>🍳 Reel Recipe Extractor</h1>
+  </header>
+
+  <section class="inputs">
+    <div class="row">
+      <input id="url" type="url" placeholder="Paste an Instagram / Facebook reel link…" autocomplete="off">
+      <button id="goUrl" class="primary">Extract</button>
+    </div>
+    <button id="goTab" class="secondary" disabled>Extract from this tab</button>
+    <div id="status" class="status" role="status"></div>
+  </section>
+
+  <main id="result" hidden>
+    <h2 id="title"></h2>
+    <div id="meta" class="chips"></div>
+    <p id="desc" class="desc"></p>
+
+    <h3>Ingredients</h3>
+    <ul id="ingredients"></ul>
+
+    <h3>Instructions</h3>
+    <ol id="steps"></ol>
+
+    <div id="notesWrap" hidden>
+      <h3>Notes</h3>
+      <ul id="notes"></ul>
+    </div>
+
+    <button id="sendApp" class="primary">Send to Kaalusemud</button>
+
+    <div class="actions">
+      <button id="copyText">Copy text</button>
+      <button id="copyMd">Copy Markdown</button>
+      <button id="download">Download</button>
+    </div>
+  </main>
+
+  <details id="rawWrap" hidden>
+    <summary>Original caption (editable)</summary>
+    <textarea id="raw" rows="8"></textarea>
+    <button id="reparse">Re-parse</button>
+  </details>
+
+  <script src="parser.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
