@@ -8,11 +8,11 @@ Works in **Chrome on a computer** (Windows, Mac or Linux). It does not work on p
 ## Install (about 2 minutes)
 
 1. Click the green **Code** button at the top of this page, then **Download ZIP**.
-2. Unzip it. Move the folder `reel-recipe-extractor` somewhere permanent, for example your Documents folder.
-   Chrome keeps reading the extension from that folder, so don't delete it afterwards.
+2. Unzip it. You get a folder called `importer-main`. Move it somewhere permanent, for example your Documents
+   folder. Chrome keeps reading the extension from that folder, so don't delete it afterwards.
 3. In Chrome, type `chrome://extensions` in the address bar and press Enter.
 4. Switch on **Developer mode** (top right).
-5. Click **Load unpacked** and choose the `reel-recipe-extractor` folder.
+5. Click **Load unpacked** and choose the `importer-main` folder (the one that contains `manifest.json`).
 6. Click the puzzle-piece icon in Chrome's toolbar and pin **Reel Recipe Extractor**.
 
 Chrome may show a "disable developer mode extensions" notice every now and then. You can dismiss it.
